@@ -1,0 +1,46 @@
+git branch xxx//创建分支xxx
+git checkout xxx //切换到xxx分支上
+git checkout -b xxx// 创建xxx分支，并切换到xxx分支上
+
+git tag “XXX” 上面查询到的hash  //对提交添加tag
+
+git stash save -a "stash1"//保存stash
+
+git stash pop --index stash@{0}  // 清楚之前的stash
+
+git stash apply --index stash@{0} //还原暂存区
+
+git stash drop stash@{0}// 清除stash 
+
+git stash clear //清除多个stash
+
+git meger xxx// 将xxx分支的修改合并到当前分支
+
+git merge --abort// 放弃合并
+
+git show HEAD/分支名/最后的HASH值//查看最新的提交
+
+git log 查看历史的体检
+
+git log -p //每次提交的差异
+
+git log --stat// 差异信息统计
+
+
+    git log --oneline --decorate --graph --all //查看历史提交及引用
+
+git diff //工作区与暂存区的差异
+
+git diff --cached//暂存区与历史提交的差异
+
+git checkout -- xxx // 还原工作区
+
+Git reset HEAD xxx //还原暂存区
+
+git clean //清理还没有提交的修改
+git clean -f//清除没有提交的修改
+git clean -n//显示未提交的修改
+
+git revert // 产生新的文件覆盖之前的提交的修改
+
+git commit --amend //修改替代上次的提交
